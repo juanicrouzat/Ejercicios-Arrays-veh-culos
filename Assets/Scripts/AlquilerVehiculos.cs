@@ -23,6 +23,19 @@ public class AlquilerVehiculos : MonoBehaviour
 
     void ResetearVehiculos()
     {
+        //Desactivar todos los elementos del array y
+        //activar solo el primer elemento
+        DesactivarTodosLosElementos();
 
+        vehiculos[0].SetActive(true);
+    }
+
+
+    void DesactivarTodosLosElementos()
+    {
+        for (int i = 0; i<vehiculos.Length; i++)
+        {
+            vehiculos[i].SetActive(false);
+        }
     }
 }

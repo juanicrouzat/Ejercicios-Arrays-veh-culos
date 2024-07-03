@@ -17,23 +17,21 @@ public class AlquilerVehiculos : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-
-        }   
+            DesactivarTodosLosElementos();
+            vehiculos[Random.Range(0, vehiculos.Length - 1)].SetActive(true);
+        }
     }
 
     void ResetearVehiculos()
     {
-        //Desactivar todos los elementos del array y
-        //activar solo el primer elemento
         DesactivarTodosLosElementos();
 
         vehiculos[0].SetActive(true);
     }
 
-
     void DesactivarTodosLosElementos()
     {
-        for (int i = 0; i<vehiculos.Length; i++)
+        for (int i = 0; i < vehiculos.Length; i++)
         {
             vehiculos[i].SetActive(false);
         }
